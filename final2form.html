@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<head>
+<title>New User Sign-Up</title>
+<style type="text/css">
+body{
+  background-image:url("ooadfinal2formbg.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+ h2{
+  color:white;
+  text-align:center;
+  font-size: 50px;
+  font-family: Lucida Console;
+  text-shadow: 0px 15px 15px black;
+ }
+
+
+.box [type="Submit"]{
+        
+        border: 1px solid black;
+        cursor: pointer;
+        font-size: 13px solid black;
+        font-family: times new roman;
+
+    }
+   
+    .box{
+        box-shadow:0 10px 10px black;
+        width: 300px;
+        height: 250px;
+        margin: auto;
+        
+    }
+
+</style>
+<script language="javascript">
+function check()
+{
+ if(document.form1.UNAME.value=="")
+ { 
+  alert("please enter the username");
+  document.form1.UNAME.focus();
+    return false;
+
+ }
+ if(document.form1.pass.value=="")
+ {
+  alert("Please Enter Your Password");
+  document.form1.pass.focus();
+  return false;
+ }
+ if(document.form1.cpass.value=="")
+ {
+  alert("Please Enter Confirm Password");
+  document.form1.cpass.focus();
+  return false;
+ }
+ if(document.form1.pass.value!=document.form1.cpass.value)
+ {
+  alert("Password is not confirmed correctly");
+  document.form1.cpass.focus();
+  return false;
+ }
+ if ( (document.form1.gender[0].checked == false ) && (document.form1.gender[1].checked == false ) ) 
+{
+alert ( "Please choose your Gender: Male or Female" ); 
+return false;
+}
+ if(document.form1.UNAME4.value=="")
+ {
+  alert("Please enter your email ID");
+  document.form1.UNAME4.focus();
+  return false;
+ }
+ if(document.form1.UNAME5.value=="")
+ {
+  alert("Please enter your mobile number");
+  document.form1.UNAME5.focus();
+  return false;
+ }
+ if(document.form1.Address.value=="")
+ {
+  alert("Please enter your address");
+  document.form1.Address.focus();
+  return false;
+ }
+ if(document.form1.check.checked == false )
+ {
+  alert("Please accept our terms and conditions");
+  return false;
+ }
+ }</script>
+</head>
+<body>
+<table width="811" height="505" border="0">
+  <tr>
+    <td colspan="2" align="center" valign="middle"><h2>New User Registration Form</h2></td>
+  </tr><form id="form1" name="form1" method="post" action="http://localhost/modend/validation2.php" onsubmit="return check();" >
+  <tr>
+    <td width="395" align="right" valign="middle"><font face="Palatino Linotype, Book Antiqua, Palatino, serif" size="+3" color="#333333">Username</font></td>
+    <td width="342">
+      <label for="USERID"></label>
+      <input type=" name" placeholder="Enter Username"  onMouseOver="Enter Username" name="UNAME" id="UNAME" pattern="[A-Za-z]{2,8}" title="ONLY TEXT"/></td>
+  </tr>
+  <tr>
+    <td align="right" valign="middle"><font face="Palatino Linotype, Book Antiqua, Palatino, serif" size="+3" color="#333333">Password</font></td>
+    <td><input type="password" placeholder="Enter your password" minlength="8" maxlength="16" required name="pass" id="pass" ></td>
+  </tr>
+  <tr>
+    <td height="76" align="right" valign="middle"><font face="Palatino Linotype, Book Antiqua, Palatino, serif" size="+3" color="#333333">Confirm Password</font></td>
+    <td><input type="password" placeholder="Confirm Your Password" name="cpass" id="cpass" required /></td>
+  </tr>
+  <tr>
+    <td align="right" valign="middle"><font face="Palatino Linotype, Book Antiqua, Palatino, serif" size="+3" color="#333333">Gender</font></td>
+    <td>
+        <input  type="radio" name="gender" id="Male" value="Male">
+        <label for="Male"><font face="Palatino Linotype, Book Antiqua, Palatino, serif" size="+1" color="#333333">Male</font></label> 
+        </p>
+      <p>
+        <input type="radio" name="gender" id="Female" value="Female">
+        <label for="Female"><font face="Palatino Linotype, Book Antiqua, Palatino, serif" size="+1" color="#333333">Female</font></label>
+      </p></td>
+  </tr>
+  <tr>
+    <td align="right" valign="middle"><font face="Palatino Linotype, Book Antiqua, Palatino, serif" size="+3" color="#333333">Email ID</font></td>
+    <td><input type="email" placeholder="Enter mail ID" name="UNAME4" id="UNAME4" /></td>
+  </tr>
+  <tr>
+    <td align="right" valign="middle"><font face="Palatino Linotype, Book Antiqua, Palatino, serif" size="+3" color="#333333">Mobile Number</font></td>
+    <td><input type="tel" maxlength="10" placeholder="Enter mobile number" required name="UNAME5" id="UNAME5" /></td>
+  </tr>
+  <tr>
+    <td align="right" valign="middle"><font face="Palatino Linotype, Book Antiqua, Palatino, serif" size="+3" color="#333333">Address</font></td>
+    <td><textarea onMouseOver="Enter your Address" name="Address" id="Address"></textarea></td>
+  </tr>
+  <tr>
+    <td align="right" valign="middle"><font face="Palatino Linotype, Book Antiqua, Palatino, serif" size="+3" color="#333333">Date Of Birth</font></td>
+    <td>
+     <label for="choose"></label>
+       <input type="date" id="dob" name="dob" required></td></tr>
+       
+  <tr>
+    <td colspan="2" align="center" valign="middle"><input type="checkbox" name="check" required  id="check">
+      <label for="check"><font face="Palatino Linotype, Book Antiqua, Palatino, serif" size="+2" color="#000000">I hereby accept all the terms and conditions</font></label>
+      (<a href="terms.html">TERMS&CONDITIONS</a>)</td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center" valign="middle"><input type="submit"  />
+      <font face="MS Serif, New York, serif" size="+3" color="#FF0000" ></font><a href="#">   </a></td>
+  </tr></form>
+</table>
+</body>
+</html>

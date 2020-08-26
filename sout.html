@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href ="style1.css" rel="stylesheet" type="text/css"/>
+<div class="register-box" class="p2" class="p3">
+<title>PAYMENT PAGE</title>
+<style type="text/css">
+body{
+background-image: url("soutbg.png");
+background-repeat: no-repeat;
+background-size:cover;
+}
+</style>
+
+</head>
+
+<style>
+h1
+{
+	text-align:center;
+	font-size:40px;
+	color:black;
+}
+</style>
+<body>
+<h1> <font face="Copperplate Gothic Bold"></font>ORDER PLACEMENT PAGE</font> </h1><br><br>
+
+<form name="card" id="card" method="post" action="http://localhost/modend/orderphp.php">
+
+<h2><center>Name On Card:<input type="text" name="firstname" id="firstname" onkeyup="this.value = this.value.replace(/[^a-zA-Z]/, '')"  required /></center></h2>
+
+<h2><center>Card Number:<input type="text" name="cnum" id="cnum" maxlength="19"  pattern="[0-9]{19}" onkeyup="this.value = this.value.replace(/[^0-9]/, '')"  required></center></h2>
+<h2><center>CVV Number:<input type="text" name="cvv" id="cvv" maxlength="3"  pattern="[0-9]{3}" onkeyup="this.value = this.value.replace(/[^0-9]/, '')"  required></center></h2>
+<h2><center>Mobile Number:<input type="tel" name="mobilenum" id="mobilenum" maxlength="10"  pattern="[0-9]{10}" onkeyup="this.value = this.value.replace(/[^0-9]/, '')"  required></center></h2>
+
+<h2><center>Expiry Date:<input type="Date" name="exp" id="exp" required></center></h2>
+<center><input type="submit" name="submit" value="submit"></center><a href="todayphp.php"><center><font face="Arial Rounded MT Bold" size="+2" color="#ffffff">return to menu</font></center></a>
+</form>
+</body>
+</html>
